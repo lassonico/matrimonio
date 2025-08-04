@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*color: #778ca3;  gris*/
+/*background-color: #a55eea;*/
+/*background-color: #d1d8e0;   gris claro*/
+
+body {
+  font-family: "Raleway", sans-serif;
+    margin: 0;
+    background-color: #d1d8e0;
+  }
+  
+  .hero {
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .confirmacion button:hover {
+    background-color: #8854d0;
+    cursor: pointer;
+  }
+  .confirmacion{
+    
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .hero h1 {
+    font-family: "Great Vibes", cursive;
+    font-size: 4em;
+    font-weight: 400;
+    color: #8854d0;
+    margin-bottom: 0.2em;
+    text-align: center;
+    margin: 30px 15px;
+  }
+
+  .hero p{
+    color: #a855f7;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  
+  .hero .fecha {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+  }
+  .hero div{
+    display: block;
+    margin: 0px auto;
+  }
+  .muñeco img {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+  
+  .confirmacion {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .confirmacion h2{
+    margin: 0px auto 30px auto;
+    font-size: 2em;
+    color: #9333ea;
+  }
+  
+  .confirmacion button {
+    background-color: #a855f7; /* Lila oscuro */
+    font-family: inherit;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+  }
