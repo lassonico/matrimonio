@@ -14,7 +14,7 @@ body {
     font-family: "Raleway", sans-serif;
     margin: 0;
     background: #ff82dc;
-    background: linear-gradient(358deg,rgba(255, 130, 220, 1) 0%, rgba(113, 44, 209, 1) 100%);
+    background: linear-gradient(358deg,#ff82dc 0%, #712cd1 100%);
     /* border: ridge #cfcfcf 20px; */
   }
   #contenido{
