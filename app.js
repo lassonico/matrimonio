@@ -21,20 +21,20 @@ if (contacto) {
 }
 
 (function(){emailjs.init("zWBQvU7UzVSMDeCkT");})();
-
-function buscarNombre(telefono) {
-    const contacto = contactos.find(c => c.telefono === telefono);
-    return contacto ? contacto.nombre : null;
-}
   
 function enviarConfirmacion() {
 emailjs.sendForm('service_7c2hsj4', 'template_nfrrcsi', '#formulario')
     .then(function(response) {
-    alert(`Gracias por confirmar tu asistencia ${nombre}. ¡Nos vemos en la boda!`);
+    alert(`Gracias por confirmar tu asistencia ${contacto.nombre}. ¡Nos vemos en la boda!`);
     }, function(error) {
     alert("Hubo un error al enviar la confirmación. Intenta nuevamente.");
     console.error(error);
     });
+}
+
+function buscarNombre(telefono) {
+    const contacto = contactos.find(c => c.telefono === telefono);
+    return contacto ? contacto.nombre : null;
 }
 
 window.addEventListener("load", function() {
