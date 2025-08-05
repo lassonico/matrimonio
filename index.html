@@ -6,35 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+NSW:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>EL MATRIMONIO DE ZULY Y MAURICIO</title>
 </head>
 <body>
+  <div class="louder-content">
+    <span id="loader" class="loader"></span>
+  </div>
+  <div id="contenido">
     <section class="hero">
-        <div class="content">
-          <h1>Mauricio Rojas & Zuly Cruz</h1>
-          <p>¡Nos casamos!</p>
-          <p class="fecha">27 de septiembre de 2025</p>
-          <div class="muñeco">
-            <!-- Aquí puedes insertar una animación SVG o GIF -->
-            <img src="img/couple-2-27.svg" alt="Muñeco invitando al evento" />
-          </div>
-        </div>
-      </section>
-    
+      <div class="content">
+        <h1>Mauricio Rojas & Zuly Cruz</h1>
+        <p>¡Nos casamos!</p>
+        <p class="fecha">27 de septiembre de 2025</p>
+      <div class="muñeco">
+              <!-- Aquí puedes insertar una animación SVG o GIF -->
+        <img src="img/couple-2-27.svg" alt="Muñeco invitando al evento" />
+      </div>
+      </div>
+    </section>
+      <h2 id="mensaje">Cargando...</h2>
       <section class="confirmacion">
         <h2>¿Nos acompañas?</h2>
-        <button onclick="enviarConfirmacion()">Confirma Asistencia</button>
-      </section>
-
-      <!-- Agrega esto dentro de la sección de confirmación -->
-    <form id="formulario" style="display:none;">
+            <button onclick="enviarConfirmacion()">Confirmar Asistencia</button>
+        </section>
+        <form id="formulario" style="display:none;">
         <input type="hidden" name="to_email" value="sionvmx@gmail.com" />
         <input type="hidden" name="message" value="Un invitado ha confirmado su asistencia al matrimonio." />
-    </form>
-  
-    
-      <script src="script.js"></script>
+        </form>
+  </div>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
