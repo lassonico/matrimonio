@@ -3,7 +3,8 @@ console.log("On line")
 const contactos = [
  { telefono: "3001234567", nombre: "Carlos" },
  { telefono: "3109876543", nombre: "Ana" },
- { telefono: "3205551122", nombre: "Luis" }
+ { telefono: "3205551122", nombre: "Luis" },
+ { telefono: "3208402599", nombre: "Lina" }
 ];
  // Función para obtener parámetros de la URL
 function obtenerParametro(nombre) {
