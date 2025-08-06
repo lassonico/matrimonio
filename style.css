@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
+/* @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"); */
 *{
   margin: 0;
   padding: 0;
@@ -13,12 +13,26 @@
 body {
     font-family: "Raleway", sans-serif;
     margin: 0;
-    background: #ff82dc;
-    background: linear-gradient(358deg,#ff82dc 0%, #712cd1 100%);
+    background: #485460;
+    background: linear-gradient(358deg, #485460 0%, #1e272e 100%);
+    position: relative;
     /* border: ridge #cfcfcf 20px; */
   }
   #contenido{
+    height: 100vh;
     display: none;
+  }
+  #contenido .esquinaiz{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #contenido .esquinader{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotateY(180deg);
   }
   .hero {
     margin: 0 auto;
@@ -33,7 +47,34 @@ body {
     text-align: center;
     padding: 60px 20px;
   }
-  
+
+svg {
+	font-family: "Great Vibes", sans-serif;
+	width: 100%; height: 100%;
+  margin-top: 5em;
+}
+svg text {
+	animation: stroke 5s infinite alternate;
+	stroke-width: 1;
+	stroke: #FFD32A;
+	font-size: 50px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(209,173,35,0); stroke: rgba(255,211,42,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(209,173,35,0); stroke: rgba(255,211,42,1); }
+	80%  {fill: rgba(209,173,35,0); stroke: rgba(255,211,42,1); stroke-width: 3; }
+	100% {
+		fill: rgba(209,173,35,1); stroke: rgba(255,211,42,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+.wrapper {background-color: #ffffff00};
+
+
   .hero h1 {
     font-family: "Great Vibes", cursive;
     font-size: 4em;
@@ -53,7 +94,7 @@ body {
   }
 
   .hero p{
-    color: white;
+    color: #ffa801;
     text-align: center;
     font-size: 1.5em;
   }
@@ -86,11 +127,11 @@ body {
   .confirmacion h2{
     margin: 0px auto 30px auto;
     font-size: 1.7em;
-    color: white;
+    color: #ffa801;
   }
   
   .confirmacion button {
-    background-color: #9333ea; /* Lila oscuro */
+    background-color: #ffd32a; /* Lila oscuro */
     font-family: inherit;
     color: white;
     font-size: 20px;
