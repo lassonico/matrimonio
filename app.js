@@ -20,7 +20,7 @@ if (contacto) {
  mensaje.textContent = "No se encontró tu número en la base de datos.";
 }
 
-(function(){emailjs.init("zWBQvU7UzVSMDeCkT");})();
+// (function(){emailjs.init("zWBQvU7UzVSMDeCkT");})();
   
 function enviarConfirmacion() {
 emailjs.sendForm('service_7c2hsj4', 'template_nfrrcsi', '#formulario')
