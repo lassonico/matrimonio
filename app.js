@@ -21,6 +21,48 @@ if (contacto) {
  mensaje.textContent = "No se encontró tu número en la base de datos.";
 }
 
+
+// TEXTO CON EFECTO MAQUINA DE ESCRIBIR
+
+function efectoMaquinaDeEscribir(texto, elementoId, velocidad = 100, pausa = 2000) {
+    const el = document.getElementById(elementoId);
+    let index = 0;
+    let escribiendo = true;
+  
+    function escribir() {
+      if (escribiendo) {
+        if (index < texto.length) {
+          el.textContent += texto.charAt(index);
+          index++;
+          setTimeout(escribir, velocidad);
+        } else {
+          escribiendo = false;
+          setTimeout(borrar, pausa);
+        }
+      }
+    }
+  
+    function borrar() {
+      if (!escribiendo) {
+        if (index > 0) {
+          el.textContent = texto.substring(0, index - 1);
+          index--;
+          setTimeout(borrar, velocidad / 2);
+        } else {
+          escribiendo = true;
+          setTimeout(escribir, 500);
+        }
+      }
+    }
+  
+    escribir();
+  }
+
+  efectoMaquinaDeEscribir("¡Estás cordialmente invitado", "typewriter");
+  efectoMaquinaDeEscribir("a nuestro matrimonio!", "mensaje1");
+
+
+
 // (function(){emailjs.init("zWBQvU7UzVSMDeCkT");})();
   
 function enviarConfirmacion() {
