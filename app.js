@@ -109,10 +109,10 @@ let isPlaying = true;
 button.addEventListener('click', () => {
   if (isPlaying) {
     audio.pause();
-    button.textContent = '⏸️';
+    button.textContent = '▶️';
   } else {
     audio.play();
-    button.textContent = '▶️';
+    button.textContent = '⏸️';
   }
   isPlaying = !isPlaying;
 });
