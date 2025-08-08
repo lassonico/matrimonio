@@ -98,3 +98,37 @@ window.addEventListener("load", function() {
     }
     }, 6000);
 });
+
+// BOTON DE MUSICA
+
+const audio = document.getElementById('background-music');
+const button = document.getElementById('toggle-music');
+
+let isPlaying = true;
+
+button.addEventListener('click', () => {
+  if (isPlaying) {
+    audio.pause();
+    button.textContent = '⏸️';
+  } else {
+    audio.play();
+    button.textContent = '▶️';
+  }
+  isPlaying = !isPlaying;
+});
+
+// const audioIcon = document.getElementById("miAudio");
+//     const iconoPlay = document.getElementById("iconoPlay");
+//     const iconoPause = document.getElementById("iconoPause");
+
+//     function toggleAudio() {
+//     if (audio.paused) {
+//         audioIcon.play();
+//         iconoPlay.style.display = "none";
+//         iconoPause.style.display = "inline";
+//     } else {
+//         audioIcon.pause();
+//         iconoPlay.style.display = "inline";
+//         iconoPause.style.display = "none";
+//     }
+// }
