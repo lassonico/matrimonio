@@ -94,7 +94,7 @@ window.addEventListener("load", function() {
     } else {
         mensaje.textContent = "Lo sentimos no te encontramos en nuestra lista de invitados.";
     }
-    }, 6000);
+    }, 4000);
 });
 
 // BOTON DE MUSICA

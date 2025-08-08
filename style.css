@@ -39,7 +39,7 @@ body {
   }
   .hero {    
     background-image: 
-    linear-gradient(to bottom, #292929ab, #3a3a3ae0),url('/img/parejaImg.jpeg'); /* Imagen de fondo */
+    linear-gradient(to bottom, #1b1b1bab, #3a3a3ae0),url('/img/parejaImg.jpeg'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -130,10 +130,18 @@ body {
     overflow: hidden;
   }
 
+  .texto_fecha{
+    text-align: center;
+    color: #ffb006;
+    font-weight: 600;
+    margin-top: 2rem;
+    font-size: 30px;
+  }
+
   .contendor_circulo p{
     font-family: "Great Vibes", sans-serif;
     position: absolute;
-    top: 45%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -163,14 +171,62 @@ body {
       transform: rotate(360deg);
     }
   }
-
-  .muñeco img {
-    width: 200px;
-    display: block;
-    margin: 0 auto;
-    animation: bounce 2s infinite;
+  .contendor_ceremonia{
+    background: #485460;
+    padding: 2rem;
   }
-  
+  .contendor_ceremonia h3{
+    text-align: center;
+    font-size: 2rem;
+    color: #ffd32a;
+    font-weight: 500;
+    margin: 2rem auto;
+  }
+  .contendor_ceremonia p{
+    color: #FFD32A;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  .contendor_recepcion{
+    background: #2a3036;
+    padding: 2rem;
+  }
+  .contendor_recepcion h3{
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 2rem auto;
+  }
+  .contendor_recepcion p{
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  .contendor_etiqueta{
+    padding: 2rem;
+  }
+
+  .contendor_etiqueta h3{
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 2rem auto;
+  }
+
+  .contendor_etiqueta p{
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
   @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
