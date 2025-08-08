@@ -58,9 +58,7 @@ function efectoMaquinaDeEscribir(texto, elementoId, velocidad = 100, pausa = 200
     escribir();
   }
 
-  efectoMaquinaDeEscribir("¡Estás cordialmente invitado", "typewriter");
-  efectoMaquinaDeEscribir("a nuestro matrimonio!", "mensaje1");
-
+efectoMaquinaDeEscribir("¡Estás cordialmente invitado a nuestro matrimonio!", "typewriter");
 
 
 // (function(){emailjs.init("zWBQvU7UzVSMDeCkT");})();
@@ -129,38 +127,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-
-// const audio = document.getElementById('background-music');
-// const button = document.getElementById('toggle-music');
-
-// let isPlaying = true;
-
-// button.addEventListener('click', () => {
-//   if (isPlaying) {
-//     audio.pause();
-//     button.textContent = '▶️';
-//   } else {
-//     audio.play();
-//     button.textContent = '⏸️';
-//   }
-//   isPlaying = !isPlaying;
-// });
-
-// function activarAudio() {
-//     const audio = document.getElementById("background-music");
-//     audio.play().catch(e => {
-//       console.log("No se pudo reproducir automáticamente:", e);
-//     });
-//   }
-
-// document.addEventListener("DOMContentLoaded", function(){
-//     const audio = document.getElementById("background-music");
-//     const botonAudio = document.getElementById("toggle-music");
-//     audio.play().catch(e => {
-//         console.log("No se pudo reproducir automáticamente:", e);
-//       });
-//     botonAudio.addEventListener("click", activarAudio());
-// });
-  
 

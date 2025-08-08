@@ -13,8 +13,9 @@
 body {
     font-family: "Raleway", sans-serif;
     margin: 0;
-    background: #485460;
-    background: linear-gradient(358deg, #485460 0%, #1e272e 100%);
+    background-color: #1e272e;
+    /* background: #485460;
+    background: linear-gradient(358deg, #485460 0%, #1e272e 100%); */
     position: relative;
     /* border: ridge #cfcfcf 20px; */
   }
@@ -23,20 +24,37 @@ body {
     display: none;
   }
   #contenido .esquinaiz{
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
   }
 
   #contenido .esquinader{
+    z-index: 1;
     position: absolute;
     top: 0;
     right: 0;
     transform: rotateY(180deg);
   }
-  .hero {
+  .hero {    
+    background-image: 
+    linear-gradient(to bottom, #292929ab, #3a3a3ae0),url('/img/parejaImg.jpeg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
     margin: 0 auto;
     padding: 2rem;
+    position: relative;
+  }
+
+  .hero svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -2px;
   }
   .confirmacion button:hover {
     background-color: #ffa801;
@@ -57,11 +75,11 @@ body {
     overflow: hidden;
   }
   .typewriter-text {
-    white-space: nowrap;
+    /* white-space: nowrap; */
     overflow: hidden;
     width: 100%;
     color: #ffd32a;
-    text-align: center;
+    text-align: left;
     font-weight: 600;
     font-size: 25px;
     margin: 2rem auto;
@@ -106,9 +124,10 @@ body {
 
   .contendor_circulo{
     position: relative;
-    filter: drop-shadow(3px 3px 2px);
+    filter: drop-shadow(2px 2px 3px);
     width: 100%;
     height: auto;
+    overflow: hidden;
   }
 
   .contendor_circulo p{
