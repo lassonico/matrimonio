@@ -189,13 +189,13 @@ body {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background-color: #1e272e00;
+    color: #ffb006;
+    background-color: transparent;
     border: none;
-    border-radius: 50%;
+    border-radius: 8px;
     padding: 10px;
-    font-size: 24px;
+    font-size: 40px;
     cursor: pointer;
-    /* box-shadow: 0 2px 6px rgba(0,0,0,0.2); */
     z-index: 1000;
   }
   

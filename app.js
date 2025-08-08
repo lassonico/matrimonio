@@ -117,18 +117,10 @@ button.addEventListener('click', () => {
   isPlaying = !isPlaying;
 });
 
-// const audioIcon = document.getElementById("miAudio");
-//     const iconoPlay = document.getElementById("iconoPlay");
-//     const iconoPause = document.getElementById("iconoPause");
 
-//     function toggleAudio() {
-//     if (audio.paused) {
-//         audioIcon.play();
-//         iconoPlay.style.display = "none";
-//         iconoPause.style.display = "inline";
-//     } else {
-//         audioIcon.pause();
-//         iconoPlay.style.display = "inline";
-//         iconoPause.style.display = "none";
-//     }
-// }
+function activarAudio() {
+    const audio = document.getElementById("miAudio");
+    audio.play().catch(e => {
+      console.log("No se pudo reproducir automáticamente:", e);
+    });
+  }
