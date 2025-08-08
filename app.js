@@ -101,26 +101,66 @@ window.addEventListener("load", function() {
 
 // BOTON DE MUSICA
 
-const audio = document.getElementById('background-music');
-const button = document.getElementById('toggle-music');
+document.addEventListener("DOMContentLoaded", function () {
+    const audio = document.getElementById("background-music");
+    const button = document.getElementById("toggle-music");
 
-let isPlaying = true;
+    let isPlaying = false;
 
-button.addEventListener('click', () => {
-  if (isPlaying) {
-    audio.pause();
-    button.textContent = '▶️';
-  } else {
-    audio.play();
-    button.textContent = '⏸️';
-  }
-  isPlaying = !isPlaying;
-});
+    button.addEventListener("click", () => {
+      // Verifica si el audio está cargado correctamente
+      if (!audio) {
+        console.error("Elemento de audio no encontrado.");
+        return;
+      }
 
-
-function activarAudio() {
-    const audio = document.getElementById("miAudio");
-    audio.play().catch(e => {
-      console.log("No se pudo reproducir automáticamente:", e);
+      // Intenta reproducir el audio
+      if (!isPlaying) {
+        audio.play().then(() => {
+          button.textContent = "⏸️";
+          isPlaying = true;
+        }).catch(e => {
+          console.log("Error al intentar reproducir:", e);
+        });
+      } else {
+        audio.pause();
+        button.textContent = "▶️";
+        isPlaying = false;
+      }
     });
-  }
+  });
+
+
+// const audio = document.getElementById('background-music');
+// const button = document.getElementById('toggle-music');
+
+// let isPlaying = true;
+
+// button.addEventListener('click', () => {
+//   if (isPlaying) {
+//     audio.pause();
+//     button.textContent = '▶️';
+//   } else {
+//     audio.play();
+//     button.textContent = '⏸️';
+//   }
+//   isPlaying = !isPlaying;
+// });
+
+// function activarAudio() {
+//     const audio = document.getElementById("background-music");
+//     audio.play().catch(e => {
+//       console.log("No se pudo reproducir automáticamente:", e);
+//     });
+//   }
+
+// document.addEventListener("DOMContentLoaded", function(){
+//     const audio = document.getElementById("background-music");
+//     const botonAudio = document.getElementById("toggle-music");
+//     audio.play().catch(e => {
+//         console.log("No se pudo reproducir automáticamente:", e);
+//       });
+//     botonAudio.addEventListener("click", activarAudio());
+// });
+  
+
