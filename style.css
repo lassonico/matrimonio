@@ -146,6 +146,7 @@ body {
     width: 100%;
     height: auto;
     overflow: hidden;
+    margin-bottom: 5rem;
   }
 
   .texto_fecha{
@@ -191,15 +192,20 @@ body {
   }
   .contendor_ceremonia{
     background: #485460;
-    padding: 2rem;
-
+    padding: 6rem 2rem;
   }
   .contendor_ceremonia h3{
+    font-family: "Great Vibes", cursive;
     text-align: center;
-    font-size: 2rem;
+    font-size: 5rem;
     color: #ffd32a;
     font-weight: 500;
     margin: 2rem auto;
+  }
+  .contendor_ceremonia svg{
+    width: 60%;
+    display: block;
+    margin: 4rem auto;
   }
   .contendor_ceremonia p{
     color: #FFD32A;
@@ -210,14 +216,20 @@ body {
 
   .contendor_recepcion{
     background: #2a3036;
-    padding: 2rem;
+    padding: 6rem 2rem;
   }
   .contendor_recepcion h3{
+    font-family: "Great Vibes", cursive;
     text-align: center;
-    font-size: 2rem;
-    color: #ffffff;
+    font-size: 5rem;
+    color: #ffd32a;
     font-weight: 500;
     margin: 2rem auto;
+  }
+  .contendor_recepcion svg{
+    width: 60%;
+    display: block;
+    margin: 4rem auto;
   }
   .contendor_recepcion p{
     color: #ffffff;
@@ -258,7 +270,7 @@ body {
   }
   
   .confirmacion button {
-    background-color: #ffd32a; /* Lila oscuro */
+    background-color: #ffd32a; 
     font-family: inherit;
     color: #485460;
     font-size: 20px;
