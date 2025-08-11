@@ -81,7 +81,9 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    margin-bottom: -5px;
+    height: 120px;
+    margin-bottom: -2px;
+    z-index: 10;
   }
   .confirmacion button:hover {
     background-color: #ffa801;
