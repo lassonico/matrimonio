@@ -58,8 +58,74 @@ function efectoMaquinaDeEscribir(texto, elementoId, velocidad = 100, pausa = 200
     escribir();
   }
 
-efectoMaquinaDeEscribir("¡Estás cordialmente invitado a nuestro matrimonio!", "typewriter");
+efectoMaquinaDeEscribir(`¡Hola Estás cordialmente invitado a nuestro matrimonio!`, "typewriter");
 
+//animacion de petalos
+
+const container = document.querySelector('.petals-container');
+
+function createPetal() {
+    const petal = document.createElement('div');
+    petal.classList.add('petal');
+    petal.style.left = Math.random() * 100 + '%';
+    petal.style.animationDuration = (5 + Math.random() * 5) + 's';
+    container.appendChild(petal);
+
+    setTimeout(() => petal.remove(), 10000);
+}
+
+setInterval(createPetal, 500);
+
+// Animacion de petalis fin
+
+// CONTEO REGRESIVO
+
+const valoresPrevios = {
+dias: null,
+horas: null,
+minutos: null,
+segundos: null
+};
+
+function actualizarContador() {
+const fechaEvento = new Date("2025-09-13T00:00:00");
+const ahora = new Date();
+const diferencia = fechaEvento - ahora;
+
+if (diferencia <= 0) {
+    document.getElementById("contador").innerHTML = "<div class='unidad'>¡Hoy es el gran día!</div>";
+    return;
+}
+
+const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+const segundos = Math.floor((diferencia / 1000) % 60);
+
+actualizarUnidad("dias", dias, "Días");
+actualizarUnidad("horas", horas, "Horas");
+actualizarUnidad("minutos", minutos, "Min");
+actualizarUnidad("segundos", segundos, "Seg");
+}
+
+function actualizarUnidad(id, valor, etiqueta) {
+const unidad = document.getElementById(id);
+unidad.setAttribute("data-label", etiqueta);
+
+if (valoresPrevios[id] !== valor) {
+    unidad.innerHTML = `<div class="numero">${valor}</div>`;
+    valoresPrevios[id] = valor;
+} else {
+    // Si no cambia, no se actualiza ni se anima
+    unidad.querySelector(".numero")?.classList.remove("numero");
+    unidad.innerHTML = `<div>${valor}</div>`;
+}
+}
+
+setInterval(actualizarContador, 1000);
+actualizarContador();
+
+// CONTEO REGRESIVO
 
 // (function(){emailjs.init("zWBQvU7UzVSMDeCkT");})();
   
@@ -92,7 +158,7 @@ window.addEventListener("load", function() {
         `Hola ${nombre}, esta es tu invitación a nustro matrimonio.
         `;
     } else {
-        mensaje.textContent = "Lo sentimos no te encontramos en nuestra lista de invitados.";
+        mensaje.textContent = "No te encontramos en nuestra lista de invitados.";
     }
     }, 4000);
 });
