@@ -52,79 +52,41 @@ const contactos = [
 //   }
 
   
-// document.getElementById("confirmar").addEventListener("click", function () {
-//     const telefono = obtenerParametro("telefono");
-//     const estado = document.getElementById("estado");
+document.getElementById("confirmar").addEventListener("click", function () {
+    const telefono = obtenerParametro("telefono");
+    const estado = document.getElementById("estado");
   
-//     if (!nombreGlobal) {
-//       estado.textContent = "No pudimos identificarte.";
-//       return;
-//     }
+    if (!nombreGlobal) {
+      estado.textContent = "No pudimos identificarte.";
+      return;
+    }
   
-//     fetch("https://formspree.io/f/mdkdbeyv", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//         "Accept": "application/json"
-//       },
-//       body: JSON.stringify({
-//         nombre: nombreGlobal,
-//         telefono: telefono,
-//         mensaje: `${nombreGlobal} ha confirmado su asistencia al matrimonio.`
-//       })
-//     })
-//     .then(response => response.json())
-//     .then(data => {
-//       if (data.ok || data.success || data.message === "Form submitted successfully") {
-//         estado.textContent = `Gracias por confirmar tu asistencia, ${nombreGlobal}!`;
-//       } else {
-//         estado.textContent = "Hubo un problema al enviar tu confirmación.";
-//       }
-//     })
-//     .catch(error => {
-//       estado.textContent = "Error de conexión al enviar la confirmación.";
-//       console.error("Error:", error);
-//     });
-//   });
+    fetch("https://formspree.io/f/mdkdbeyv", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        nombre: nombreGlobal,
+        telefono: telefono,
+        mensaje: `${nombreGlobal} ha confirmado su asistencia al matrimonio.`
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.ok || data.success || data.message === "Form submitted successfully") {
+        estado.textContent = `Gracias por confirmar tu asistencia, ${nombreGlobal}!`;
+      } else {
+        estado.textContent = "Hubo un problema al enviar tu confirmación.";
+      }
+    })
+    .catch(error => {
+      estado.textContent = "Error de conexión al enviar la confirmación.";
+      console.error("Error:", error);
+    });
+  });
   
-  
-
-fetch("https://formspree.io/f/mdkdbeyv", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    "Accept": "application/json"
-  },
-  body: JSON.stringify({
-    nombre: nombreGlobal,
-    telefono: telefono,
-    mensaje: `${nombreGlobal} ha confirmado su asistencia al matrimonio.`
-  })
-})
-.then(response => response.json())
-.then(data => {
-  if (data.ok || data.success || data.message === "Form submitted successfully") {
-    mostrarModal(`Gracias por confirmar tu asistencia, ${nombreGlobal}!`);
-  } else {
-    mostrarModal("Hubo un problema al enviar tu confirmación.");
-  }
-})
-.catch(error => {
-  mostrarModal("Error de conexión al enviar la confirmación.");
-  console.error("Error:", error);
-});
-
-function mostrarModal(mensaje) {
-  const modal = document.getElementById("modalConfirmacion");
-  const mensajeModal = document.getElementById("mensajeModal");
-  mensajeModal.textContent = mensaje;
-  modal.style.display = "flex";
-
-  setTimeout(() => {
-    modal.style.display = "none";
-  }, 4000); // se cierra automáticamente en 4 segundos
-}
-
   
 
 // (function(){emailjs.init("zWBQvU7UzVSMDeCkT");})();
