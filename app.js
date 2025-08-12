@@ -55,12 +55,12 @@ const contactos = [
 document.getElementById("confirmar").addEventListener("click", function () {
     const telefono = obtenerParametro("telefono");
     const estado = document.getElementById("estado");
-
+  
     if (!nombreGlobal) {
       estado.textContent = "No pudimos identificarte.";
       return;
     }
-
+  
     fetch("https://formspree.io/f/mdkdbeyv", {
       method: "POST",
       headers: {
@@ -73,8 +73,9 @@ document.getElementById("confirmar").addEventListener("click", function () {
         mensaje: `${nombreGlobal} ha confirmado su asistencia al matrimonio.`
       })
     })
-    .then(response => {
-      if (response.ok) {
+    .then(response => response.json())
+    .then(data => {
+      if (data.ok || data.success || data.message === "Form submitted successfully") {
         estado.textContent = `Gracias por confirmar tu asistencia, ${nombreGlobal}!`;
       } else {
         estado.textContent = "Hubo un problema al enviar tu confirmación.";
@@ -82,9 +83,10 @@ document.getElementById("confirmar").addEventListener("click", function () {
     })
     .catch(error => {
       estado.textContent = "Error de conexión al enviar la confirmación.";
+      console.error("Error:", error);
     });
   });
-
+  
   
   
 
