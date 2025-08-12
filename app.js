@@ -51,6 +51,20 @@ const contactos = [
     }
   }
 
+  function enviarConfirmacion() {
+    if (nombreGlobal) {
+      // Asignar el nombre al campo oculto
+      document.getElementById("nombreInput").value = nombreGlobal;
+  
+      // Enviar el formulario automáticamente
+      document.getElementById("formulario").submit();
+  
+      alert(`Gracias por confirmar tu asistencia, ${nombreGlobal}!`);
+    } else {
+      alert("No pudimos identificarte.");
+    }
+  }
+  
 
 // (function(){emailjs.init("zWBQvU7UzVSMDeCkT");})();
   
