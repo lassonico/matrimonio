@@ -42,21 +42,23 @@ const contactos = [
   });
 
   // Función que usa el nombre global
-  function enviarConfirmacion() {
-    if (nombreGlobal) {
-      alert(`Gracias por confirmar tu asistencia, ${nombreGlobal}!`);
-      // Aquí podrías enviar el nombre a una API o por correo
-    } else {
-      alert("No pudimos identificarte.");
-    }
-  }
+//   function enviarConfirmacion() {
+//     if (nombreGlobal) {
+//       alert(`Gracias por confirmar tu asistencia, ${nombreGlobal}!`);
+//       // Aquí podrías enviar el nombre a una API o por correo
+//     } else {
+//       alert("No pudimos identificarte.");
+//     }
+//   }
 
   function enviarConfirmacion() {
-    if (nombreGlobal) {
-      // Asignar el nombre al campo oculto
-      document.getElementById("nombreInput").value = nombreGlobal;
+    const telefono = obtenerParametro("telefono");
   
-      // Enviar el formulario automáticamente
+    if (nombreGlobal) {
+      document.getElementById("nombreInput").value = nombreGlobal;
+      document.getElementById("telefonoInput").value = telefono;
+      document.getElementById("mensajeInput").value = `${nombreGlobal} ha confirmado su asistencia al matrimonio.`;
+  
       document.getElementById("formulario").submit();
   
       alert(`Gracias por confirmar tu asistencia, ${nombreGlobal}!`);
@@ -64,6 +66,7 @@ const contactos = [
       alert("No pudimos identificarte.");
     }
   }
+  
   
 
 // (function(){emailjs.init("zWBQvU7UzVSMDeCkT");})();

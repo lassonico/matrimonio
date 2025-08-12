@@ -89,9 +89,10 @@
     </div>
     <section class="confirmacion">
       <h2>¿Nos acompañas?</h2>
-      <button onclick="enviarConfirmacion()">Confirmar Asistencia</button>
+      <form id="formulario" action="https://formspree.io/f/mdkdbeyv" method="POST" style="display:none;">
+        <button onclick="enviarConfirmacion()">Confirmar Asistencia</button>
+      </form>
     </section>
-    <form id="formulario" action="https://formspree.io/f/mdkdbeyv" method="POST" style="display:none;">
 
         <audio id="background-music" loop>
           <source src="/audio/WhatsApp Audio 2025-08-07 at 9.50.21 PM.mpeg" type="audio/mpeg">
