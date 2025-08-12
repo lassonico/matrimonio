@@ -54,21 +54,40 @@ const contactos = [
 //     }
 //   }
 
-  function enviarConfirmacion() {
+  
+document.getElementById("confirmar").addEventListener("click", function () {
     const telefono = obtenerParametro("telefono");
-  
-    if (nombreGlobal) {
-      document.getElementById("nombreInput").value = nombreGlobal;
-      document.getElementById("telefonoInput").value = telefono;
-      document.getElementById("mensajeInput").value = `${nombreGlobal} ha confirmado su asistencia al matrimonio.`;
-  
-      document.getElementById("formulario").submit();
-  
-      alert(`Gracias por confirmar tu asistencia, ${nombreGlobal}!`);
-    } else {
-      alert("No pudimos identificarte.");
+    const estado = document.getElementById("estado");
+
+    if (!nombreGlobal) {
+      estado.textContent = "No pudimos identificarte.";
+      return;
     }
-  }
+
+    fetch("https://formspree.io/f/mdkdbeyv", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        nombre: nombreGlobal,
+        telefono: telefono,
+        mensaje: `${nombreGlobal} ha confirmado su asistencia al matrimonio.`
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        estado.textContent = `Gracias por confirmar tu asistencia, ${nombreGlobal}!`;
+      } else {
+        estado.textContent = "Hubo un problema al enviar tu confirmación.";
+      }
+    })
+    .catch(error => {
+      estado.textContent = "Error de conexión al enviar la confirmación.";
+    });
+  });
+
   
   
 
