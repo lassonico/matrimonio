@@ -157,10 +157,11 @@ body {
   }
 
   #mensaje{
+    font-family: "Great Vibes", cursive;
     text-align: center;
     color: #ffd32a;
     margin: 3rem 2rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 400;
   }
 

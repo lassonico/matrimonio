@@ -1,41 +1,55 @@
 console.log("On line")
 
+
 const contactos = [
-  { telefono: "3001234567", nombre: "Carlos" },
-  { telefono: "3109876543", nombre: "Ana" },
-  { telefono: "3205551122", nombre: "Luis" },
-  { telefono: "3208402599", nombre: "Lina" }
-];
+    { telefono: "3001234567", nombre: "Carlos" },
+    { telefono: "3109876543", nombre: "Ana" },
+    { telefono: "3205551122", nombre: "Luis" },
+    { telefono: "3208402599", nombre: "Lina" }
+  ];
 
-// Función para obtener parámetros de la URL
-function obtenerParametro(nombre) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(nombre);
-}
+  // Variable global para guardar el nombre
+  let nombreGlobal = null;
 
-// Buscar nombre por teléfono
-function buscarNombre(telefono) {
-  const contacto = contactos.find(c => c.telefono === telefono);
-  return contacto ? contacto.nombre : null;
-}
+  // Función para obtener parámetros de la URL
+  function obtenerParametro(nombre) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(nombre);
+  }
 
-// Mostrar contenido después del loader
-window.addEventListener("load", function() {
-  setTimeout(function() {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("contenido").style.display = "block";
+  // Buscar nombre por teléfono
+  function buscarNombre(telefono) {
+    const contacto = contactos.find(c => c.telefono === telefono);
+    return contacto ? contacto.nombre : null;
+  }
 
-    const telefono = obtenerParametro("telefono");
-    const nombre = buscarNombre(telefono);
+  // Mostrar contenido después del loader
+  window.addEventListener("load", function() {
+    setTimeout(function() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("contenido").style.display = "block";
 
-    const mensaje = document.getElementById("mensaje");
-    if (nombre) {
-      mensaje.textContent = `Hola ${nombre}, acompáñanos en este día y celebra con nosotros esta nueva etapa en nuestras vidas.`;
+      const telefono = obtenerParametro("telefono");
+      nombreGlobal = buscarNombre(telefono); // Asignación a variable global
+
+      const mensaje = document.getElementById("mensaje");
+      if (nombreGlobal) {
+        mensaje.textContent = `${nombreGlobal}`;
+      } else {
+        mensaje.textContent = "No te encontramos en nuestra lista de invitados.";
+      }
+    }, 4000);
+  });
+
+  // Función que usa el nombre global
+  function enviarConfirmacion() {
+    if (nombreGlobal) {
+      alert(`Gracias por confirmar tu asistencia, ${nombreGlobal}!`);
+      // Aquí podrías enviar el nombre a una API o por correo
     } else {
-      mensaje.textContent = "No te encontramos en nuestra lista de invitados.";
+      alert("No pudimos identificarte.");
     }
-  }, 4000);
-});
+  }
 
 
 // (function(){emailjs.init("zWBQvU7UzVSMDeCkT");})();
