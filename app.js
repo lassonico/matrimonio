@@ -4,8 +4,8 @@ console.log("On line")
 const contactos = [
     { telefono: "3001234567", nombre: "Carlos" },
     { telefono: "3109876543", nombre: "Ana" },
-    { telefono: "3205551122", nombre: "Luis" },
-    { telefono: "3208402599", nombre: "Lina" }
+    { telefono: "3205551122", nombre: "Luis y acompañante" },
+    { telefono: "3208402599", nombre: "Lina y Esposo" }
   ];
 
   // Variable global para guardar el nombre
@@ -54,15 +54,15 @@ const contactos = [
 
 // (function(){emailjs.init("zWBQvU7UzVSMDeCkT");})();
   
-function enviarConfirmacion() {
-    emailjs.sendForm('service_7c2hsj4', 'template_nfrrcsi', '#formulario')
-        .then(function(response) {
-        alert(`Gracias por confirmar tu asistencia ${contacto.nombre}. ¡Nos vemos en la boda!`);
-        }, function(error) {
-        alert("Hubo un error al enviar la confirmación. Intenta nuevamente.");
-        console.error(error);
-    });
-}
+// function enviarConfirmacion() {
+//     emailjs.sendForm('service_7c2hsj4', 'template_nfrrcsi', '#formulario')
+//         .then(function(response) {
+//         alert(`Gracias por confirmar tu asistencia ${nombreGlobal}. ¡Nos vemos en la boda!`);
+//         }, function(error) {
+//         alert("Hubo un error al enviar la confirmación. Intenta nuevamente.");
+//         console.error(error);
+//     });
+// }
 
 
 // TEXTO CON EFECTO MAQUINA DE ESCRIBIR
@@ -101,7 +101,7 @@ function efectoMaquinaDeEscribir(texto, elementoId, velocidad = 100, pausa = 200
     escribir();
   }
 
-efectoMaquinaDeEscribir(`¡Hola Estás cordialmente invitado a nuestro matrimonio!`, "typewriter");
+efectoMaquinaDeEscribir(`Queremos que nos acompañes en éste día tan especial`, "typewriter");
 
 //animacion de petalos
 
