@@ -33,10 +33,13 @@ const contactos = [
       nombreGlobal = buscarNombre(telefono); // Asignación a variable global
 
       const mensaje = document.getElementById("mensaje");
+      const mensaje_2 = document.getElementById("mensaje_2");
       if (nombreGlobal) {
         mensaje.textContent = `${nombreGlobal}`;
+        mensaje_2.textContent = `${nombreGlobal}`;
       } else {
         mensaje.textContent = "No te encontramos en nuestra lista de invitados.";
+        mensaje_2.textContent = "No te encontramos en nuestra lista de invitados.";
       }
     }, 4000);
   });
