@@ -140,7 +140,7 @@ function efectoMaquinaDeEscribir(texto, elementoId, velocidad = 100, pausa = 200
     escribir();
   }
 
-efectoMaquinaDeEscribir(`Queremos que nos acompañes en éste día tan especial`, "typewriter");
+efectoMaquinaDeEscribir(`Y queremos que nos acompañes en éste día tan especial`, "typewriter");
 
 //animacion de petalos
 

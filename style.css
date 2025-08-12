@@ -165,6 +165,22 @@ body {
     font-weight: 500;
   }
 
+  .nos_casamos{
+    font-family: "Great Vibes", cursive;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 500;
+    color: #ffff;
+    text-shadow: 2px 2px 3px #0000;
+    margin: 3rem auto;
+  }
+
+  .anillos{
+    display: block;
+    margin: 2rem auto;
+    transform: rotate(16deg);
+  }
+
   .contendor_circulo{
     position: relative;
     filter: drop-shadow(2px 2px 3px);
@@ -199,7 +215,7 @@ body {
 
   .contendor_circulo img{
     display: block;
-    margin: 60px auto;
+    margin: 30px auto;
     animation: rotar 4.5s linear infinite;
   }
   @media (min-width: 768px) {
@@ -376,27 +392,15 @@ body {
   }
 
   .contendor_recepcion{
+    height: 100vh;
+    background-image: 
+    linear-gradient(to bottom, #1b1b1bab, #3a3a3a94),url('/img/fondoWebCelebracion.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
-    background: #2a3036;
+    /* background: #2a3036; */
     padding: 6rem 2rem;
-  }
-
-  .contendor_recepcion .separativo_rec{
-    position: absolute;
-    top: -8.5rem;
-    left: 0;
-    width: 100vw;
-    height: auto;
-    z-index: 1;
-  }
-
-  .contendor_recepcion .separativo_rec_2{
-    position: absolute;
-    top: -9rem;
-    left: 0;
-    width: 100vw;
-    height: auto;
-    transform: rotateY(180deg);
   }
 
   .contendor_recepcion h3{
@@ -405,7 +409,7 @@ body {
     font-size: 3rem;
     color: #ffff;
     font-weight: 500;
-    margin: 2rem auto;
+    margin: 5rem auto;
   }
   .contendor_recepcion svg{
     width: 30%;
@@ -442,6 +446,16 @@ body {
     padding: 6rem 2rem;
   }
 
+  .contenedor_svgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+    height: auto;
+    margin: 5rem auto;
+    
+  }
   .contendor_etiqueta .separativo_et{
     position: absolute;
     top: -5.5rem;
@@ -470,15 +484,31 @@ body {
   }
 
   .contendor_etiqueta .corbata{
-    width: 40%;
-    display: block;
-    margin: 4rem auto;
-    filter: drop-shadow(3px 5px rgb(2, 2, 2));
+    /* filter: drop-shadow(3px 5px rgb(2, 2, 2)); */
     animation: sube 1.3s ease-in-out infinite;
     object-position: bottom;
   }
 
   @keyframes sube{
+    0%{
+      transform: translateY(0) scaleY(1);
+    }
+    50%{
+      transform: translateY(-5px) scaleY(1.1);
+    }
+    100%{
+      transform: translateY(0) scaleY(1);
+    }
+  }
+
+  .contenedor_svgs .vestido{
+    /* filter: drop-shadow(3px 5px rgb(2, 2, 2)); */
+    animation: subeVestido 1.4s ease-in-out infinite;
+    object-position: bottom;
+    margin: 2rem;
+  }
+
+  @keyframes subeVestido{
     0%{
       transform: translateY(0) scaleY(1);
     }
