@@ -52,7 +52,7 @@ body {
   }
 
   .hero .content{
-    margin-top: 10rem;
+    margin-top: 14rem;
   }
 
 .petal {
@@ -104,7 +104,7 @@ body {
   }
   .separador_{
     display: block;
-    margin: 5rem auto;
+    margin: 2rem auto;
   }
   .typewriter-text {
     /* white-space: nowrap; */
@@ -146,7 +146,7 @@ body {
   }
 
   .hero .separador{
-    font-size: 3rem;
+    font-size: 2.2rem;
     text-align: center;
     background: linear-gradient(to bottom, #FFD32A 13%, #ff9b06 72%);
     -webkit-background-clip: text;
@@ -161,8 +161,8 @@ body {
   #mensaje{
     text-align: center;
     color: #ffd32a;
-    margin: 25px;
-    font-size: 2rem;
+    margin: 3rem 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
   }
 
@@ -172,7 +172,7 @@ body {
     width: 100%;
     height: auto;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 3rem auto 7rem auto;
     padding: 2rem;
   }
 
@@ -218,26 +218,49 @@ body {
     }
   }
   .contendor_ceremonia{
+    position: relative;
     background: #485460;
     padding: 6rem 2rem;
-    border-top: solid 5px #ffd32a;
+  }
+  .contendor_ceremonia .separativo{
+    position: absolute;
+    top: -9.6rem;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 1;
+  }
+  .contendor_ceremonia .separativo_3{
+    position: absolute;
+    top: -9.8rem;
+    left: 0;
+    width: 100vw;
+    height: auto;
+  }
+  
+  .contendor_ceremonia .separativo_2{
+    position: absolute;
+    top: -11rem;
+    left: 0;
+    width: 100vw;
+    height: auto;
   }
   .contendor_ceremonia h3{
     font-family: "Great Vibes", cursive;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #ffd32a;
     font-weight: 500;
     margin: 2rem auto;
   }
   .contendor_ceremonia svg{
-    width: 50%;
+    width: 30%;
     display: block;
     margin: 4rem auto;
   }
   .contendor_ceremonia p{
     color: #FFD32A;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 2rem;
     text-align: center;
@@ -246,7 +269,7 @@ body {
   .btn_como_llegar{
     display: block;
     text-decoration: none;
-    width: 70%;
+    width: 60%;
     text-align: center;
     padding: 1rem;
     font-size: 1rem;
@@ -326,13 +349,13 @@ body {
   .contendor_recepcion h3{
     font-family: "Great Vibes", cursive;
     text-align: center;
-    font-size: 4rem;
-    color: #ffd32a;
+    font-size: 3rem;
+    color: #ffff;
     font-weight: 500;
     margin: 2rem auto;
   }
   .contendor_recepcion svg{
-    width: 60%;
+    width: 30%;
     display: block;
     margin: 4rem auto;
   }
@@ -345,7 +368,8 @@ body {
       transform: scaleY(1);
     }
     50%{
-      transform: scaleY(1.1);
+      transform: scaleY(1.07);
+      transform-origin: bottom;
     }
     100%{
       transform: scaleY(1);
@@ -354,7 +378,7 @@ body {
   
   .contendor_recepcion p{
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 2rem;
     text-align: center;
@@ -367,14 +391,14 @@ body {
   .contendor_etiqueta h3{
     font-family: "Great Vibes", cursive;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #ffffff;
     font-weight: 500;
     margin: 2rem auto;
   }
 
   .contendor_etiqueta svg{
-    width: 70%;
+    width: 40%;
     display: block;
     margin: 4rem auto;
     filter: drop-shadow(3px 5px rgb(2, 2, 2));
@@ -387,7 +411,7 @@ body {
       transform: translateY(0) scaleY(1);
     }
     50%{
-      transform: translateY(-20px) scaleY(1.2);
+      transform: translateY(-10px) scaleY(1.1);
     }
     100%{
       transform: translateY(0) scaleY(1);
@@ -397,7 +421,7 @@ body {
   .contendor_etiqueta p{
     text-align: center;
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 2rem;
   }
