@@ -156,7 +156,7 @@ body {
     margin: 2rem auto;
   }
 
-  #mensaje, #mensaje_2{
+  #mensaje{
     font-family: "Great Vibes", cursive;
     text-align: center;
     color: #ffd32a;
@@ -234,33 +234,14 @@ body {
     }
   }
   .contendor_ceremonia{
-    position: relative;
-    background: #485460;
+    background-image: 
+    linear-gradient(to bottom, #1b1b1bea, #29292977),url('/img/backgroundCeremonia.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 6rem 2rem;
   }
-  .contendor_ceremonia .separativo{
-    position: absolute;
-    top: -9.6rem;
-    left: 0;
-    width: 100vw;
-    height: auto;
-    z-index: 1;
-  }
-  .contendor_ceremonia .separativo_3{
-    position: absolute;
-    top: -9.8rem;
-    left: 0;
-    width: 100vw;
-    height: auto;
-  }
   
-  .contendor_ceremonia .separativo_2{
-    position: absolute;
-    top: -11rem;
-    left: 0;
-    width: 100vw;
-    height: auto;
-  }
   .contendor_ceremonia h3{
     font-family: "Great Vibes", cursive;
     text-align: center;
@@ -503,7 +484,6 @@ body {
   }
 
   .contenedor_svgs .vestido{
-    /* filter: drop-shadow(3px 5px rgb(2, 2, 2)); */
     animation: subeVestido 1.4s ease-in-out infinite;
     object-position: bottom;
     margin: 2rem;
@@ -537,13 +517,22 @@ body {
   .confirmacion h2{
     margin: 0px auto 30px auto;
     font-size: 1.7em;
-    color: #ffa801;
+    color: #ffffff;
   }
   
+  #mensaje_2{
+    font-family: "Great Vibes", cursive;
+    text-align: center;
+    color: #ffffff;
+    margin: 3rem 2rem;
+    font-size: 4rem;
+    font-weight: 500;
+  }
+
   .confirmacion button {
-    background-color: #ffd32a; 
+    background-color: #ff9100; 
     font-family: inherit;
-    color: #485460;
+    color: #ffff;
     font-size: 20px;
     font-weight: 700;
     border: none;
@@ -591,7 +580,7 @@ body {
 
 .confirmacion{
   background-image: 
-  linear-gradient(to bottom, #1b1b1bd8, #3a3a3a00),url('/img/imagenfooter.webp');
+  linear-gradient(to bottom, #1b1b1bea, #29292977),url('/img/imagenfooter.webp');
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
