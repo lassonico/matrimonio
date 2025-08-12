@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-/* @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"); */
+
 *{
   margin: 0;
   padding: 0;
@@ -14,11 +14,9 @@ body {
     font-family: "Raleway", sans-serif;
     margin: 0;
     background-color: #1e272e;
-    /* background: #485460;
-    background: linear-gradient(358deg, rgb(72, 84, 96) 0%, #1e272e 100%); */
     position: relative;
-    /* border: ridge #cfcfcf 20px; */
   }
+
   #contenido{
     height: auto;
     display: none;
@@ -281,6 +279,23 @@ body {
     border-radius: 30px;
   }
 
+  .contendor_ceremonia .separativo_bottom_1{
+    position: absolute;
+    bottom: -7rem;
+    left: 0;
+    width: 100vw;
+    height: auto;
+  }
+
+  .contendor_ceremonia .separativo_bottom{
+    position: absolute;
+    bottom: -7.3rem;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 1;
+  }
+
   .contenedor_contador{
     position: relative;
     width: 100%;
@@ -360,9 +375,29 @@ body {
   }
 
   .contendor_recepcion{
+    position: relative;
     background: #2a3036;
     padding: 6rem 2rem;
   }
+
+  .contendor_recepcion .separativo_rec{
+    position: absolute;
+    top: -8.5rem;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 1;
+  }
+
+  .contendor_recepcion .separativo_rec_2{
+    position: absolute;
+    top: -9rem;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    transform: rotateY(180deg);
+  }
+
   .contendor_recepcion h3{
     font-family: "Great Vibes", cursive;
     text-align: center;
@@ -402,7 +437,26 @@ body {
   }
 
   .contendor_etiqueta{
+    position: relative;
     padding: 6rem 2rem;
+  }
+
+  .contendor_etiqueta .separativo_et{
+    position: absolute;
+    top: -5.5rem;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 1;
+  }
+
+  .contendor_etiqueta .separativo_et_2{
+    position: absolute;
+    top: -5.6rem;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    /* transform: rotateY(180deg); */
   }
 
   .contendor_etiqueta h3{
@@ -414,7 +468,7 @@ body {
     margin: 2rem auto;
   }
 
-  .contendor_etiqueta svg{
+  .contendor_etiqueta .corbata{
     width: 40%;
     display: block;
     margin: 4rem auto;
