@@ -54,7 +54,7 @@ const contactos = [
   { nombre: "RODOLFO CUMBE", numero: "3102269254" },
   { nombre: "JHON FREDY CASTAÑEDA", numero: "3155372283" },
   { nombre: "ANDREY PERDOMO", numero: "3219858811" },
-  { nombre: "YENNY MENDEZ", numero: "3058290372" },
+  { nombre: "YENNY MENDEZ", numero: "3058290372" }
 ];
 
 console.log(contactos[0])
