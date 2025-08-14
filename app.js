@@ -74,31 +74,6 @@ console.log(contactos[0])
     return contacto ? contacto.nombre : null;
   }
 
-  // Mostrar contenido después del loader
-//   window.addEventListener("load", function() {
-//     setTimeout(function() {
-//       document.getElementById("loader").style.display = "none";
-//       document.getElementById("contenido").style.display = "block";
-      
-//       const textoInv = document.getElementById("texto_invitancion");
-//       const btn = document.getElementById("btn_confirmar");
-//       const telefono = obtenerParametro("telefono");
-//       nombreGlobal = buscarNombre(telefono); // Asignación a variable global
-
-      
-//       const mensaje_2 = document.getElementById("mensaje_2");
-
-//       if (nombreGlobal) {
-//         mensaje_2.textContent = `${nombreGlobal}`;
-//         mensaje_2.style.fontFamily = "Great Vibes, cursive";
-//       } else {
-//         mensaje_2.textContent = "No te encontramos en nuestra lista de invitados.";
-//         btn.style.display ="none";
-//         textoInv.style.display ="none";
-//       }
-//     }, 4000);
-//   });
-
 // Función para capitalizar cada palabra del nombre
 function capitalizarNombre(nombre) {
     return nombre
@@ -149,6 +124,7 @@ function capitalizarNombre(nombre) {
 document.getElementById("confirmar").addEventListener("click", function (e) {
     e.preventDefault();
     e.stopPropagation();
+    const modal = document.getElementById("modalConfirmacion");
     const telefono = obtenerParametro("telefono");
     const estado = document.getElementById("estado");
   
@@ -173,6 +149,8 @@ document.getElementById("confirmar").addEventListener("click", function (e) {
     .then(data => {
       if (data.ok || data.success || data.message === "Form submitted successfully") {
         estado.textContent = `Gracias por confirmar tu asistencia, ${nombreGlobal}!`;
+        modal.style.remove = "display: none;";
+        modal.style.display = "block";
       } else {
         estado.textContent = "Hubo un problema al enviar tu confirmación.";
       }
