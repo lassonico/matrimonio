@@ -148,7 +148,6 @@ document.getElementById("confirmar").addEventListener("click", function (e) {
       },
       body: JSON.stringify({
         nombre: nombreGlobal,
-        primername: primernombre,
         telefono: telefono,
         mensaje: `${nombreGlobal} ha confirmado su asistencia al matrimonio.`
       })
@@ -156,7 +155,8 @@ document.getElementById("confirmar").addEventListener("click", function (e) {
     .then(response => response.json())
     .then(data => {
       if (data.ok || data.success || data.message === "Form submitted successfully") {
-        estado.textContent = `Gracias por confirmar tu asistencia, ${primernombre}!`;
+        const primername = nombreGlobal.trim().split(" ")[0];
+        estado.textContent = `Gracias por confirmar tu asistencia, ${primername}!`;
         modal.style.remove = "display: none;";
         modal.style.display = "flex";
       } else {
