@@ -86,6 +86,7 @@ console.log(contactos[0])
       nombreGlobal = buscarNombre(telefono); // Asignación a variable global
 
       const mensaje_2 = document.getElementById("mensaje_2");
+
       if (nombreGlobal) {
         mensaje_2.textContent = `${nombreGlobal}`;
       } else {
@@ -107,7 +108,9 @@ console.log(contactos[0])
 //   }
 
   
-document.getElementById("confirmar").addEventListener("click", function () {
+document.getElementById("confirmar").addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
     const telefono = obtenerParametro("telefono");
     const estado = document.getElementById("estado");
   
