@@ -115,18 +115,6 @@ function capitalizarNombre(nombre) {
       }
     }, 6000);
   });
-
-
-  // Función que usa el nombre global
-//   function enviarConfirmacion() {
-//     if (nombreGlobal) {
-//       alert(`Gracias por confirmar tu asistencia, ${nombreGlobal}!`);
-//       // Aquí podrías enviar el nombre a una API o por correo
-//     } else {
-//       alert("No pudimos identificarte.");
-//     }
-//   }
-
   
 document.getElementById("confirmar").addEventListener("click", function (e) {
     e.preventDefault();
