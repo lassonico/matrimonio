@@ -57,7 +57,7 @@ const contactos = [
   { nombre: "YENNY MENDEZ", numero: "3058290372" },
 ];
 
-  console.log(contactos.nombre[0])
+console.log(contactos[0])
 
   // Variable global para guardar el nombre
   let nombreGlobal = null;
