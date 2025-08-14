@@ -581,6 +581,7 @@ body {
     width: 100%;
     margin: 0;
     line-height: .8;
+    font-size: 8px;
   }
 
   .louder-content{
