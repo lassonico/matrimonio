@@ -75,6 +75,37 @@ console.log(contactos[0])
   }
 
   // Mostrar contenido después del loader
+//   window.addEventListener("load", function() {
+//     setTimeout(function() {
+//       document.getElementById("loader").style.display = "none";
+//       document.getElementById("contenido").style.display = "block";
+      
+//       const textoInv = document.getElementById("texto_invitancion");
+//       const btn = document.getElementById("btn_confirmar");
+//       const telefono = obtenerParametro("telefono");
+//       nombreGlobal = buscarNombre(telefono); // Asignación a variable global
+
+      
+//       const mensaje_2 = document.getElementById("mensaje_2");
+
+//       if (nombreGlobal) {
+//         mensaje_2.textContent = `${nombreGlobal}`;
+//         mensaje_2.style.fontFamily = "Great Vibes, cursive";
+//       } else {
+//         mensaje_2.textContent = "No te encontramos en nuestra lista de invitados.";
+//         btn.style.display ="none";
+//         textoInv.style.display ="none";
+//       }
+//     }, 4000);
+//   });
+
+// Función para capitalizar cada palabra del nombre
+function capitalizarNombre(nombre) {
+    return nombre
+      .toLowerCase()
+      .replace(/(?:^|\s|,|-|\.|\/|¿|¡|!|\(|\)|:|;|")([a-záéíóúñü])/g, (match) => match.toUpperCase());
+  }
+  
   window.addEventListener("load", function() {
     setTimeout(function() {
       document.getElementById("loader").style.display = "none";
@@ -84,9 +115,14 @@ console.log(contactos[0])
       const btn = document.getElementById("btn_confirmar");
       const telefono = obtenerParametro("telefono");
       nombreGlobal = buscarNombre(telefono); // Asignación a variable global
-
+  
+      // Normaliza el nombre aquí, si existe
+      if (nombreGlobal) {
+        nombreGlobal = capitalizarNombre(nombreGlobal);
+      }
+      
       const mensaje_2 = document.getElementById("mensaje_2");
-
+  
       if (nombreGlobal) {
         mensaje_2.textContent = `${nombreGlobal}`;
         mensaje_2.style.fontFamily = "Great Vibes, cursive";
@@ -97,6 +133,7 @@ console.log(contactos[0])
       }
     }, 4000);
   });
+
 
   // Función que usa el nombre global
 //   function enviarConfirmacion() {
