@@ -19,7 +19,7 @@ const contactos = [
   { nombre: "AUGUSTO", numero: "3223725333" },
   { nombre: "JHON HENRY Y SEÑORA", numero: "3144301774" },
   { nombre: "LUIS CAMACHO Y SEÑORA", numero: "3213044320" },
-  { nombre: "JAVIER FIERRO", numero: "3215838866" },
+  { nombre: "JAVIER FIERRO Y VIKY COLLAZOS", numero: "3215838866" },
   { nombre: "SANTIAGO VILLARREAL Y SEÑORA", numero: "3023605464" },
   { nombre: "WILTON ROJAS, SEÑORA, DANA Y GALA ROJAS", numero: "3204551584" },
   { nombre: "JORGE RAMIREZ", numero: "3152342723" },
@@ -54,7 +54,9 @@ const contactos = [
   { nombre: "RODOLFO CUMBE", numero: "3102269254" },
   { nombre: "JHON FREDY CASTAÑEDA", numero: "3155372283" },
   { nombre: "ANDREY PERDOMO", numero: "3219858811" },
-  { nombre: "YENNY MENDEZ", numero: "3058290372" }
+  { nombre: "YENNY MENDEZ", numero: "3058290372" },
+  {nombre: "CARLOS MOSQUERA Y ORLANDO BERRIO", numero: "3208669827" },
+  {nombre: "CLAUDIA TOVAR", numero: "3133574979" }
 ];
 
 console.log(contactos[0])
