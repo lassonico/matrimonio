@@ -580,6 +580,15 @@ body {
     align-items: center;
   }
 
+  #text_louder{
+    font-family: "Great Vibes", cursive;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: #ffff;
+    margin: 2rem auto;
+  }
+
 .confirmacion{
   background-image: 
   linear-gradient(to bottom, #1b1b1bf3, #292929b0),url('/img/imagenfooter.webp');

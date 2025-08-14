@@ -83,14 +83,6 @@ function capitalizarNombre(nombre) {
       .replace(/(?:^|\s|,|-|\.|\/|¿|¡|!|\(|\)|:|;|")([a-záéíóúñü])/g, (match) => match.toUpperCase());
   }
 
-  function imprimirPrimerNombre(contacto) {
-    if (contacto && contacto.nombre) {
-      const primerNombre = contacto.nombre.trim().split(" ")[0];
-      console.log(primerNombre);
-    } else {
-      console.log("El objeto contacto no tiene un nombre válido");
-    }
-  }
   
   window.addEventListener("load", function() {
     setTimeout(function() {
@@ -105,17 +97,17 @@ function capitalizarNombre(nombre) {
       // Normaliza el nombre aquí, si existe
       if (nombreGlobal) {
         nombreGlobal = capitalizarNombre(nombreGlobal);
-        nombreGlobalMone = imprimirPrimerNombre(nombreGlobal);
       }
       
       const mensaje_2 = document.getElementById("mensaje_2");
       const nameloader = document.getElementById("text_louder");
   
       if (nombreGlobal) {
-        nameloader.textContent =`${nombreGlobalMone}`;
+        // Obtener el primer nombre
+        const primernombre = nombreGlobal.trim().split(" ")[0];
+        nameloader.textContent = `${primernombre}`;
         mensaje_2.textContent = `${nombreGlobal}`;
         mensaje_2.style.fontFamily = "Great Vibes, cursive";
-
       } else {
         mensaje_2.textContent = "No te encontramos en nuestra lista de invitados.";
         btn.style.display ="none";
