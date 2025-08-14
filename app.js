@@ -1,7 +1,7 @@
 console.log("On line")
 
 const contactos = [
-    { nombre: "ESTEBAN ROJAS Y SEÑORA", numero: "3103012233" },
+    { nombre: "Esteban Rojas y Señora", numero: "3103012233" },
   { nombre: "MILENA LOSADA", numero: "3118405972" },
   { nombre: "SAMARA ROJAS", numero: "3105759169" },
   { nombre: "MANUEL LOSADA Y SEÑORA", numero: "3229001778" },
@@ -89,6 +89,7 @@ console.log(contactos[0])
 
       if (nombreGlobal) {
         mensaje_2.textContent = `${nombreGlobal}`;
+        mensaje_2.style.fontFamily = "Great Vibes, cursive";
       } else {
         mensaje_2.textContent = "No te encontramos en nuestra lista de invitados.";
         btn.style.display ="none";

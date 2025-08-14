@@ -242,7 +242,7 @@ body {
     background-repeat: no-repeat;
     padding: 6rem 2rem;
   }
-  
+
   .contendor_ceremonia h3{
     font-family: "Great Vibes", cursive;
     text-align: center;
@@ -521,7 +521,7 @@ body {
     color: #ffffff;
   }
   
-  #mensaje_2{
+  .confirmacion #mensaje_2{
     font-family: "Great Vibes", cursive;
     text-align: center;
     color: #ffffff;
