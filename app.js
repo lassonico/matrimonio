@@ -86,7 +86,7 @@ function capitalizarNombre(nombre) {
   
   window.addEventListener("load", function() {
     setTimeout(function() {
-      document.getElementById("loader").style.display = "none";
+      document.querySelector(".louder-content").style.display = "none";
       document.getElementById("contenido").style.display = "block";
       
       const textoInv = document.getElementById("texto_invitancion");
@@ -109,7 +109,7 @@ function capitalizarNombre(nombre) {
         mensaje_2.textContent = `${nombreGlobal}`;
         mensaje_2.style.fontFamily = "Great Vibes, cursive";
       } else {
-        mensaje_2.textContent = "No te encontramos en nuestra lista de invitados.";
+        mensaje_2.textContent = "Lo sentimos no te encontramos en nuestra lista de invitados.";
         btn.style.display ="none";
         textoInv.style.display ="none";
       }
@@ -148,6 +148,7 @@ document.getElementById("confirmar").addEventListener("click", function (e) {
       },
       body: JSON.stringify({
         nombre: nombreGlobal,
+        primername: primernombre,
         telefono: telefono,
         mensaje: `${nombreGlobal} ha confirmado su asistencia al matrimonio.`
       })
@@ -155,7 +156,7 @@ document.getElementById("confirmar").addEventListener("click", function (e) {
     .then(response => response.json())
     .then(data => {
       if (data.ok || data.success || data.message === "Form submitted successfully") {
-        estado.textContent = `Gracias por confirmar tu asistencia, ${nombreGlobal}!`;
+        estado.textContent = `Gracias por confirmar tu asistencia, ${primernombre}!`;
         modal.style.remove = "display: none;";
         modal.style.display = "flex";
       } else {
