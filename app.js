@@ -93,7 +93,7 @@ function capitalizarNombre(nombre) {
       nombreGlobal = capitalizarNombre(nombreGlobal);
       // Obtener el primer nombre
       const primernombre = nombreGlobal.trim().split(" ")[0];
-      document.getElementById("text_louder").textContent = primernombre;
+      document.getElementById("text_louder").textContent = `¡Hola ${primernombre}!`;
     }
   
     setTimeout(function() {
@@ -161,7 +161,7 @@ document.getElementById("confirmar").addEventListener("click", function (e) {
       return;
     }
   
-    fetch("https://formspree.io/f/mdkdbeyv", {
+    fetch("https://formspree.io/f/mkgzezby", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
