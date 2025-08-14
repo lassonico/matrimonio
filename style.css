@@ -42,7 +42,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
@@ -50,7 +50,7 @@ body {
   }
 
   .hero .content{
-    margin-top: 14rem;
+    margin-top: 10rem;
   }
 
 .petal {
@@ -102,7 +102,7 @@ body {
   }
   .separador_{
     display: block;
-    margin: 2rem auto;
+    margin: 2rem auto 7rem auto;
   }
   .typewriter-text {
     /* white-space: nowrap; */
@@ -587,9 +587,9 @@ body {
   background-position: right;
   background-repeat: no-repeat;
   width: 100%;
-  height: 700px;
+  height: auto;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 5rem 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -612,7 +612,7 @@ body {
 .modal-contenido {
   background-color: white;
   padding: 20px;
-  margin: 0;
+  margin: 2rem;
   border-radius: 12px;
   text-align: center;
   font-size: 18px;

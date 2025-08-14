@@ -2,7 +2,7 @@ console.log("On line")
 
 const contactos = [
     { nombre: "Esteban Rojas y Señora", numero: "3103012233" },
-  { nombre: "MILENA LOSADA", numero: "3118405972" },
+    { nombre: "MILENA LOSADA", numero: "3118405972" },
   { nombre: "SAMARA ROJAS", numero: "3105759169" },
   { nombre: "MANUEL LOSADA Y SEÑORA", numero: "3229001778" },
   { nombre: "SEBASTIAN DIAZ", numero: "3232215103" },
@@ -33,7 +33,7 @@ const contactos = [
   { nombre: "SEBASTIAN SOTELO Y SAUL VALLEJO", numero: "3004939849" },
   { nombre: "RAMIRO TAMAYO", numero: "3123580342" },
   { nombre: "MARIO VALBUENA Y SEÑORA", numero: "3174361270" },
-  { nombre: "SERGIO MONA Y SRA", numero: "3219653557" },
+  { nombre: "SERGIO MONA Y SEÑORA", numero: "3219653557" },
   { nombre: "JHON JAIVER LOSADA", numero: "3207671588" },
   { nombre: "ELISA ALARCON Y ESPOSO", numero: "3214890463" },
   { nombre: "MARLIO VALBUENA Y SEÑORA", numero: "3118257181" },
@@ -82,6 +82,15 @@ function capitalizarNombre(nombre) {
       .toLowerCase()
       .replace(/(?:^|\s|,|-|\.|\/|¿|¡|!|\(|\)|:|;|")([a-záéíóúñü])/g, (match) => match.toUpperCase());
   }
+
+  function imprimirPrimerNombre(contacto) {
+    if (contacto && contacto.nombre) {
+      const primerNombre = contacto.nombre.trim().split(" ")[0];
+      console.log(primerNombre);
+    } else {
+      console.log("El objeto contacto no tiene un nombre válido");
+    }
+  }
   
   window.addEventListener("load", function() {
     setTimeout(function() {
@@ -96,19 +105,23 @@ function capitalizarNombre(nombre) {
       // Normaliza el nombre aquí, si existe
       if (nombreGlobal) {
         nombreGlobal = capitalizarNombre(nombreGlobal);
+        nombreGlobalMone = imprimirPrimerNombre(nombreGlobal);
       }
       
       const mensaje_2 = document.getElementById("mensaje_2");
+      const nameloader = document.getElementById("text_louder");
   
       if (nombreGlobal) {
+        nameloader.textContent =`${nombreGlobalMone}`;
         mensaje_2.textContent = `${nombreGlobal}`;
         mensaje_2.style.fontFamily = "Great Vibes, cursive";
+
       } else {
         mensaje_2.textContent = "No te encontramos en nuestra lista de invitados.";
         btn.style.display ="none";
         textoInv.style.display ="none";
       }
-    }, 4000);
+    }, 6000);
   });
 
 
