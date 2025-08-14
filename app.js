@@ -70,7 +70,7 @@ console.log(contactos[0])
 
   // Buscar nombre por teléfono
   function buscarNombre(telefono) {
-    const contacto = contactos.find(c => c.telefono === telefono);
+    const contacto = contactos.find( c => c.numero === telefono);
     return contacto ? contacto.nombre : null;
   }
 
@@ -79,7 +79,9 @@ console.log(contactos[0])
     setTimeout(function() {
       document.getElementById("loader").style.display = "none";
       document.getElementById("contenido").style.display = "block";
-
+      
+      const textoInv = document.getElementById("texto_invitancion");
+      const btn = document.getElementById("btn_confirmar");
       const telefono = obtenerParametro("telefono");
       nombreGlobal = buscarNombre(telefono); // Asignación a variable global
 
@@ -88,6 +90,8 @@ console.log(contactos[0])
         mensaje_2.textContent = `${nombreGlobal}`;
       } else {
         mensaje_2.textContent = "No te encontramos en nuestra lista de invitados.";
+        btn.style.display ="none";
+        textoInv.style.display ="none";
       }
     }, 4000);
   });
