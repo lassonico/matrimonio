@@ -126,7 +126,7 @@ document.getElementById("confirmar").addEventListener("click", function (e) {
     e.stopPropagation();
     const modal = document.getElementById("modalConfirmacion");
     const telefono = obtenerParametro("telefono");
-    const estado = document.getElementById("estado");
+    const estado = document.getElementById("mensajeModal");
   
     if (!nombreGlobal) {
       estado.textContent = "No pudimos identificarte.";
@@ -150,7 +150,7 @@ document.getElementById("confirmar").addEventListener("click", function (e) {
       if (data.ok || data.success || data.message === "Form submitted successfully") {
         estado.textContent = `Gracias por confirmar tu asistencia, ${nombreGlobal}!`;
         modal.style.remove = "display: none;";
-        modal.style.display = "block";
+        modal.style.display = "flex";
       } else {
         estado.textContent = "Hubo un problema al enviar tu confirmación.";
       }
@@ -159,7 +159,20 @@ document.getElementById("confirmar").addEventListener("click", function (e) {
       estado.textContent = "Error de conexión al enviar la confirmación.";
       console.error("Error:", error);
     });
+
   });
+
+  document.getElementById("btn_cerrar_modal").addEventListener( "click", function (e){
+    e.preventDefault();
+    const formulario = document.getElementById("confirmar");
+    const cmodal = document.getElementById("modalConfirmacion");
+    console.log("diste click en cerrar modal");
+    cmodal.classList.remove("modal");
+    cmodal.classList.add("cierre_modal");
+    formulario.reset();
+    window.scrollTo(0,0)
+    window.location.replace("https://maoyzuly.netlify.app");
+})
 
 
 // TEXTO CON EFECTO MAQUINA DE ESCRIBIR

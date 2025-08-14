@@ -86,7 +86,6 @@
     </div>
     <section class="confirmacion">
       <h2 id="mensaje_2"></h2>
-      <h2 id="estado"></h2>
       <h2 id="texto_invitancion">Queremos que éste día sea inolvidable<br> ¿Nos acompañas?</h2>
       <form id="confirmar" action="https://formspree.io/f/mdkdbeyv" method="POST" >
         <button id="btn_confirmar" type="submit">Confirmar Asistencia</button>
@@ -100,9 +99,10 @@
   </div>
 
   
-<div id="modalConfirmacion" class="modal">
+<div id="modalConfirmacion" class="modal" style="display: none;">
   <div class="modal-contenido">
-    <p id="mensajeModal">Gracias por confirmar tu asistencia, ¡te esperamos!</p>
+    <p id="mensajeModal"></p>
+    <button id="btn_cerrar_modal" type="submit" class="cerrar_modal">Aceptar</button>
   </div>
 </div
 
