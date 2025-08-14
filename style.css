@@ -581,7 +581,7 @@ body {
     align-items: center;
   }
 
-  #text_louder{
+  .louder-content #text_louder{
     font-family: "Great Vibes", cursive;
     text-align: center;
     font-weight: normal;

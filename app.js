@@ -83,29 +83,28 @@ function capitalizarNombre(nombre) {
       .replace(/(?:^|\s|,|-|\.|\/|¿|¡|!|\(|\)|:|;|")([a-záéíóúñü])/g, (match) => match.toUpperCase());
   }
 
-  
   window.addEventListener("load", function() {
+    // Buscar y mostrar el primer nombre en el loader apenas carga la página
+    const telefono = obtenerParametro("telefono");
+    nombreGlobal = buscarNombre(telefono); // Asignación a variable global
+  
+    // Normaliza el nombre aquí, si existe
+    if (nombreGlobal) {
+      nombreGlobal = capitalizarNombre(nombreGlobal);
+      // Obtener el primer nombre
+      const primernombre = nombreGlobal.trim().split(" ")[0];
+      document.getElementById("text_louder").textContent = primernombre;
+    }
+  
     setTimeout(function() {
       document.querySelector(".louder-content").style.display = "none";
       document.getElementById("contenido").style.display = "block";
       
       const textoInv = document.getElementById("texto_invitancion");
       const btn = document.getElementById("btn_confirmar");
-      const telefono = obtenerParametro("telefono");
-      nombreGlobal = buscarNombre(telefono); // Asignación a variable global
-  
-      // Normaliza el nombre aquí, si existe
-      if (nombreGlobal) {
-        nombreGlobal = capitalizarNombre(nombreGlobal);
-      }
-      
       const mensaje_2 = document.getElementById("mensaje_2");
-      const nameloader = document.getElementById("text_louder");
   
       if (nombreGlobal) {
-        // Obtener el primer nombre
-        const primernombre = nombreGlobal.trim().split(" ")[0];
-        nameloader.textContent = `${primernombre}`;
         mensaje_2.textContent = `${nombreGlobal}`;
         mensaje_2.style.fontFamily = "Great Vibes, cursive";
       } else {
@@ -115,6 +114,40 @@ function capitalizarNombre(nombre) {
       }
     }, 6000);
   });
+
+  
+//   window.addEventListener("load", function() {
+
+//     setTimeout(function() {
+//       document.querySelector(".louder-content").style.display = "none";
+//       document.getElementById("contenido").style.display = "block";
+      
+//       const textoInv = document.getElementById("texto_invitancion");
+//       const btn = document.getElementById("btn_confirmar");
+//       const telefono = obtenerParametro("telefono");
+//       nombreGlobal = buscarNombre(telefono); // Asignación a variable global
+  
+//       // Normaliza el nombre aquí, si existe
+//       if (nombreGlobal) {
+//         nombreGlobal = capitalizarNombre(nombreGlobal);
+//       }
+      
+//       const mensaje_2 = document.getElementById("mensaje_2");
+//       const nameloader = document.getElementById("text_louder");
+  
+//       if (nombreGlobal) {
+//         // Obtener el primer nombre
+//         const primernombre = nombreGlobal.trim().split(" ")[0];
+//         nameloader.textContent = `${primernombre}`;
+//         mensaje_2.textContent = `${nombreGlobal}`;
+//         mensaje_2.style.fontFamily = "Great Vibes, cursive";
+//       } else {
+//         mensaje_2.textContent = "Lo sentimos no te encontramos en nuestra lista de invitados.";
+//         btn.style.display ="none";
+//         textoInv.style.display ="none";
+//       }
+//     }, 6000);
+//   });
   
 document.getElementById("confirmar").addEventListener("click", function (e) {
     e.preventDefault();
