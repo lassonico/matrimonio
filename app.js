@@ -15,7 +15,7 @@ const contactos = [
   { nombre: "GIOVANNY LOSADA, SEÑORA E HIJA", numero: "3123416289" },
   { nombre: "HENRY FIERRO Y SEÑORA", numero: "3245045032" },
   { nombre: "DUBER LOSADA Y SEÑORA", numero: "3124936587" },
-  { nombre: "NICOLAS LASSO Y SEÑORA", numero: "3175097713" },
+  { nombre: "MONICA PAOLA Y SU MACHO", numero: "3138505017" },
   { nombre: "AUGUSTO", numero: "3223725333" },
   { nombre: "JHON HENRY Y SEÑORA", numero: "3144301774" },
   { nombre: "LUIS CAMACHO Y SEÑORA", numero: "3213044320" },
