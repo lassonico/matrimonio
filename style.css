@@ -234,6 +234,7 @@ body {
     }
   }
   .contendor_ceremonia{
+    position: relative;
     background-image: 
     linear-gradient(to bottom, #1b1b1bea, #29292977),url('/img/backgroundCeremonia.webp');
     background-size: cover;
@@ -241,6 +242,14 @@ body {
     background-repeat: no-repeat;
     padding: 6rem 2rem;
   }
+/* 
+  .olasseparador{
+    position: relative;
+    margin-bottom: -5rem;
+    width: 100vw;
+    height: auto;
+    filter: grayscale(1);
+  } */
 
   .contendor_ceremonia h3{
     font-family: "Great Vibes", cursive;
