@@ -174,7 +174,6 @@ document.getElementById("confirmar").addEventListener("click", function (e) {
     window.location.replace("https://maoyzuly.netlify.app");
 })
 
-
 // TEXTO CON EFECTO MAQUINA DE ESCRIBIR
 
 function efectoMaquinaDeEscribir(texto, elementoId, velocidad = 100, pausa = 2000) {
