@@ -274,8 +274,9 @@ body {
     background-color: #ffa801;
     color: #373d44;
     font-weight: 600;
-    margin: 5rem auto 0 auto;
+    margin: 2rem auto 0 auto;
     cursor: pointer;
+    border: none;
     border-radius: 30px;
   }
 
@@ -611,7 +612,7 @@ body {
 .modal-contenido {
   background-color: white;
   padding: 20px;
-  margin: 2rem auto;
+  margin: 4rem;
   border-radius: 12px;
   text-align: center;
   font-size: 18px;
@@ -621,4 +622,10 @@ body {
 @keyframes aparecer {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+}
+
+#mensajeModal{
+  font-size: 1.2rem;
+  margin: 0 auto;
+  text-align: center;
 }
