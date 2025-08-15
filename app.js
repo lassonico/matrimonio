@@ -59,8 +59,6 @@ const contactos = [
   {nombre: "CLAUDIA TOVAR", numero: "3133574979" }
 ];
 
-console.log(contactos[0])
-
   // Variable global para guardar el nombre
   let nombreGlobal = null;
 
@@ -116,39 +114,7 @@ function capitalizarNombre(nombre) {
   });
 
   
-//   window.addEventListener("load", function() {
 
-//     setTimeout(function() {
-//       document.querySelector(".louder-content").style.display = "none";
-//       document.getElementById("contenido").style.display = "block";
-      
-//       const textoInv = document.getElementById("texto_invitancion");
-//       const btn = document.getElementById("btn_confirmar");
-//       const telefono = obtenerParametro("telefono");
-//       nombreGlobal = buscarNombre(telefono); // Asignación a variable global
-  
-//       // Normaliza el nombre aquí, si existe
-//       if (nombreGlobal) {
-//         nombreGlobal = capitalizarNombre(nombreGlobal);
-//       }
-      
-//       const mensaje_2 = document.getElementById("mensaje_2");
-//       const nameloader = document.getElementById("text_louder");
-  
-//       if (nombreGlobal) {
-//         // Obtener el primer nombre
-//         const primernombre = nombreGlobal.trim().split(" ")[0];
-//         nameloader.textContent = `${primernombre}`;
-//         mensaje_2.textContent = `${nombreGlobal}`;
-//         mensaje_2.style.fontFamily = "Great Vibes, cursive";
-//       } else {
-//         mensaje_2.textContent = "Lo sentimos no te encontramos en nuestra lista de invitados.";
-//         btn.style.display ="none";
-//         textoInv.style.display ="none";
-//       }
-//     }, 6000);
-//   });
-  
 document.getElementById("confirmar").addEventListener("click", function (e) {
     e.preventDefault();
     e.stopPropagation();

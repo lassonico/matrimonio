@@ -510,7 +510,28 @@ body {
     font-weight: 400;
     margin-bottom: 2rem;
   }
-  
+
+  .divisor{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .contenedor_sin_ninos{
+    height: auto;
+    margin: 3rem auto;
+    padding: 2rem;
+  }
+  .contenedor_sin_ninos img{
+    display: block;
+    margin: 2rem auto 4rem auto;
+  }
+  .contenedor_sin_ninos p{
+    text-align: center;
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ffd32a;
+    font-weight: 400;
+  }
   .confirmacion {
     position: relative;
     text-align: center;
