@@ -516,6 +516,23 @@ body {
     margin: 0 auto;
   }
 
+  .contenedor_lluvia_desobres{
+    background: #373d44;
+    padding: 5rem 2rem;
+  }
+  .contenedor_lluvia_desobres svg{
+    display: block;
+    margin: 2rem auto;
+  }
+
+  .contenedor_lluvia_desobres p{
+    font-family: "Great Vibes", cursive;
+    text-align: center;
+    font-size: 3rem;
+    color: #ffff;
+    text-shadow: 3px 3px 4px #000;
+  }
+
   .contenedor_sin_ninos{
     height: auto;
     margin: 3rem auto;
