@@ -60,7 +60,8 @@ const contactos = [
     {nombre: "JHON FREDY Y YISELA", numero: "3204244680"},
     {nombre: "MARIA GRACIELA Y ESTELA", numero: "3212689534"},
     {nombre: "WILSON OSORIO", numero: "3204089192"},
-    {nombre: "DIEGO ZAMORA Y SEÑORA", numero: "34613779310"}
+    {nombre: "DIEGO ZAMORA Y SEÑORA", numero: "34613779310"},
+    {nombre: "EFRET MORALES MURGAS Y ANDRES IBARRA", numero: "3015015706"}
 ];
 
 
