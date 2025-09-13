@@ -1,4 +1,6 @@
-const contactos = [
+
+
+export const contactos = [
     { nombre: "Esteban Rojas y Señora", numero: "3103012233", confirmado: true },
     { nombre: "MILENA LOSADA", numero: "3118405972", confirmado: true },
     { nombre: "SAMARA ROJAS", numero: "3105759169", confirmado: true },
