@@ -118,7 +118,7 @@ function capitalizarNombre(nombre) {
         mensaje_2.textContent = `${nombreGlobal}`;
         mensaje_2.style.fontFamily = "Great Vibes, cursive";
       } else {
-        mensaje_2.textContent = "Lo sentimos no te encontramos en nuestra lista de invitados.";
+        mensaje_2.textContent = "¡Hoy es nuestro gran día!";
         btn.style.display ="none";
         textoInv.style.display ="none";
       }
